@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech  - Electronics Shop</title>
+
+<style>
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:35px;
+}
+
+
+/* =========================
+   HEADER FLEXBOX
+========================= */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#111;
+    color:white;
+
+    padding:20px 10%;
+
+}
+
+header h1{
+    font-size:32px;
+}
+
+
+nav{
+
+    display:flex;
+    gap:25px;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+
+}
+
+
+nav a:hover{
+
+    color:#00bfff;
+
+}
+
+
+/* =========================
+   HERO SECTION FLEXBOX
+========================= */
+
+
+.hero{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:40px;
+
+    background:linear-gradient(
+    120deg,#111,#0077ff);
+
+    color:white;
+
+    min-height:500px;
+
+}
+
+
+.hero-content{
+
+    flex:1;
+
+}
+
+
+.hero-content h2{
+
+    text-align:left;
+    font-size:45px;
+
+}
+
+
+.hero-content p{
+
+    font-size:20px;
+    margin:20px 0;
+
+}
+
+
+button{
+
+    padding:12px 30px;
+
+    background:#0077ff;
+
+    border:none;
+
+    color:white;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#0055cc;
+
+}
+
+
+.hero-image{
+
+    flex:1;
+
+}
+
+
+.hero-image img{
+
+    width:100%;
+    border-radius:15px;
+
+}
+
+
+
+/* =========================
+   PRODUCT FLEXBOX
+========================= */
+
+
+.product-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.product-card{
+
+    background:white;
+
+    width:300px;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px #ccc;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+
+.product-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+.product-card h3{
+
+    margin:15px;
+
+}
+
+
+.price{
+
+    color:#0077ff;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* =========================
+   ABOUT FLEXBOX
+========================= */
+
+
+.about{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+
+.about img{
+
+    width:50%;
+
+    border-radius:15px;
+
+}
+
+
+.about-text{
+
+    flex:1;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+   CONTACT FLEXBOX
+========================= */
+
+
+.contact-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+
+
+/* =========================
+   LOGIN FLEXBOX
+========================= */
+
+
+.login-box{
+
+    width:350px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+input{
+
+    padding:12px;
+
+    border:1px solid #aaa;
+
+    border-radius:5px;
+
+}
+
+
+
+/* =========================
+   FOOTER FLEXBOX
+========================= */
+
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+.social a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+@media(max-width:800px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.hero-content h2{
+
+    text-align:center;
+
+}
+
+
+.about{
+
+    flex-direction:column;
+
+}
+
+
+.about img{
+
+    width:100%;
+
+}
+
+
+.login-box{
+
+    width:100%;
+
+}
+
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>TechStore</h1>
+
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Login</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+<h2>
+Premium Electronics For Everyone
+</h2>
+
+
+<p>
+Shop the latest smartphones, laptops,
+and accessories with trusted quality.
+</p>
+
+
+<button>
+Explore Products
+</button>
+
+
+</div>
+
+
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=700">
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- PRODUCTS -->
+
+
+<section>
+
+
+<h2>
+Featured Products
+</h2>
+
+
+<div class="product-container">
+
+
+<div class="product-card">
+
+
+<img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600">
+
+
+<h3>
+Gaming Laptop
+</h3>
+
+
+<p>
+High performance laptop for gaming and professional work.
+</p>
+
+
+<p class="price">
+$899
+</p>
+
+
+<button>
+Buy Now
+</button>
+
+
+</div>
+
+
+
+
+<div class="product-card">
+
+
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600">
+
+
+<h3>
+Smartphone
+</h3>
+
+
+<p>
+Flagship smartphone with powerful camera and performance.
+</p>
+
+
+<p class="price">
+$699
+</p>
+
+
+<button>
+Buy Now
+</button>
+
+
+</div>
+
+
+
+
+<div class="product-card">
+
+
+<img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600">
+
+
+<h3>
+Headphones
+</h3>
+
+
+<p>
+Premium sound quality with noise cancellation.
+</p>
+
+
+<p class="price">
+$199
+</p>
+
+
+<button>
+Buy Now
+</button>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section>
+
+
+<h2>
+About TechStore
+</h2>
+
+
+<div class="about">
+
+
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700">
+
+
+<div class="about-text">
+
+<p>
+
+TechStore provides premium electronic products
+with affordable prices, fast delivery and excellent
+customer support. Our mission is to make modern
+technology accessible for everyone.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section>
+
+
+<h2>
+Contact Us
+</h2>
+
+
+<div class="contact-box">
+
+<p>📧 support@tech Gadgets.com</p>
+
+<p>📞 +91 6385313317</p>
+
+<p>📍 Chennai, Tamil Nadu</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- LOGIN -->
+
+
+<section>
+
+
+<h2>
+User Login
+</h2>
+
+
+<div class="login-box">
+
+
+<input type="text" placeholder="Username">
+
+
+<input type="password" placeholder="Password">
+
+
+<button>
+Login
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<div class="social">
+
+<a href="#">
+Facebook
+</a>
+
+<a href="#">
+Instagram
+</a>
+
+<a href="#">
+Twitter
+</a>
+
+<a href="#">
+LinkedIn
+</a>
+
+
+</div>
+
+
+<p>
+© 2026 Tech Gadgets | All Rights Reserved
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
